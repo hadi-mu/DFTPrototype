@@ -1,0 +1,48 @@
+.articlePreview, .articleHeading, .buttons, .searchBar {
+  margin-top: 20px;
+  margin-left: 20px !important;
+  margin-right: 20px;
+}
+
+.searchBar{
+  width:100%!important;
+}
+
+.summary{
+  margin-left: 10px !important ;
+}
+
+
+.buttons {
+  margin-left: 20px;
+  background-color: #18747C !important;
+  margin-bottom: 10px;
+}
+
+
+.articleHeading {
+  color: black;
+  text-align: left;
+  font-family: Helvetica;
+  font-size: 40px;
+  background-color: #EDEEF4;
+  padding: 5px;
+}
+
+.searchButton{
+  background-color: #18747C !important;
+}
+
+.articlePreview {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #EDEEF4;
+  padding: 5px;
+}
+
+.custom {
+  width: 100px !important;
+  height: 50px !important;
+}/*# sourceMappingURL=mainStyles.css.map */
+
