@@ -1,1 +1,1 @@
-# DFTProtoype
+# DFTPrototype
