@@ -30,16 +30,18 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
-<body>
 
+
+
+<body>
 
     <div class="row g-0">
         <img src="{{url_for('static',filename='logo2.png')}}" alt="DFT Logo" class="img-fluid">
     </div>
 
     <div class="searchBar">
-        <div class="container">
 
+        <div class="container">
             <form>
               <div class="row">
                   <div class="input-group">
@@ -48,16 +50,17 @@
                       <button id="searchButton" class="btn btn-search" type="button"><i class="glyphicon glyphicon-search"></i></button>
                     </span>
                   </div><!-- /input-group -->
-                              </div><!-- /.row -->
+              </div><!-- /.row -->
             </form>
               
-            </div><!-- /.container -->
-      </div>
-    <div class="row " style="margin-top:20px; margin-left:10px;">
-                
+        </div><!-- /.container -->
+    </div>
+
+
+    <div class="row " style="margin-top:20px; margin-left:10px;"> 
+
             <div class="col-2">
                 <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
-
                 <script>
                     $(function() {
                         $('input[name="daterange"]').daterangepicker({
@@ -81,15 +84,19 @@
                     {%for type in types%}
 
                         <option> {{type}} </option>
-                        {% endfor %}
-                  </select>
+
+
+                    {% endfor %}
+                </select>
             </div>
 
             <div class="col-2">
                     <select class="selectpicker custom" multiple data-live-search="true">
                         {%for author in authors%}
+
                             <option> {{author}} </option>
-                            {% endfor %}
+
+                        {% endfor %}
                       </select>
                 
             </div>
@@ -97,9 +104,12 @@
             <div class="col-2">
                 <div class="dropdown">
                     <select class="selectpicker custom" multiple data-live-search="true">
+
                         {%for source in sources%}
+
                             <option> {{source}} </option>
-                            {% endfor %}
+
+                        {% endfor %}
                       </select>
                 </div>
             </div>
@@ -107,48 +117,51 @@
     </div>
 
 
-         <div class="row summary">
+    <div class="row summary">
 
             <h2 class="display-2" style="margin-top: 20px;">Overall Findings</h2>
+
+
             <p class="lead">
+
+
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
             </p>
-         </div>   
+    </div>   
 
 
-         <div class="row">
-            <div class="col-4">
-                <h6 class="articleHeading rounded text-truncate"> Provisional Report 2022</h6>
-            </div>
-            <div class="col-4">
-                <h6 class="articleHeading rounded text-truncate"> Car Accidents 2019</h6>
-            </div>
-            <div class="col-4">
-                <h6 class="articleHeading rounded text-truncate"> Fishing Accidents 2021</h6>
-            </div>
-         </div>
-
-
-         <div class="row">
-            <div class="col-4">
-                <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                </h6>
-            </div>
-            <div class="col-4">
-                <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                </h6>
-            </div>
-            <div class="col-4">
-                <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                </h6>
-            </div>
-         </div>
-
-
-
-
+    <div class="row">
+        <div class="col-4">
+            <h6 class="articleHeading rounded text-truncate"> Provisional Report 2022</h6>
+        </div>
+        <div class="col-4">
+            <h6 class="articleHeading rounded text-truncate"> Car Accidents 2019</h6>
+        </div>
+        <div class="col-4">
+            <h6 class="articleHeading rounded text-truncate"> Fishing Accidents 2021</h6>
+        </div>
     </div>
+
+
+    <div class="row">
+        <div class="col-4">
+            <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </h6>
+        </div>
+        <div class="col-4">
+            <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </h6>
+        </div>
+        <div class="col-4">
+            <h6 class="articlePreview rounded"> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+            </h6>
+        </div>
+    </div>
+
+
+
+
 
 
 
