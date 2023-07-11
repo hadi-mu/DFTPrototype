@@ -22,13 +22,20 @@ def index():
           )
 
 @app.route('/date',methods=['POST','GET'])
-
 def changeDate():
          if request.method == 'POST': #query posted to this method
                   dateRange=request.form['start']+':'+request.form['end']
                   print("Dates selected are " + dateRange)
          return render_template('main.html', sources=SOURCES, authors=AUTHORS,types=TYPES,summary=sumText,headings=prevHeadings,previewText=prevText
           )
+
+@app.route('/filter',methods=['POST','GET'])
+def changeFilters():
+        print("Filtering")
+        if request.method == 'POST':
+                print("Types: " + request.form['types'])
+        
+
         
 def searchQuery(query,startDate=None,endDate=None,sources=None,authors=None,types=None):
         
