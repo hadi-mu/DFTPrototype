@@ -12,7 +12,7 @@
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
     <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
     <script src="{{url_for('static',filename='js/searchFunc.js')}}"></script>
-    <script src="{{url_for('static',filename='js/dropdown.js')}}"></script>
+    <script src="{{url_for('static',filename='js/submission.js')}}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,7 +80,8 @@
             </div>
 
             <div class="col-2">
-                <select class="selectpicker custom" multiple data-live-search="true">
+                <select name="typeSelect" id = "typeSelection" class="selectpicker custom" multiple data-live-search="true">
+
                     {%for type in types%}
 
                         <option> {{type}} </option>
@@ -91,7 +92,7 @@
             </div>
 
             <div class="col-2">
-                    <select class="selectpicker custom" multiple data-live-search="true">
+                    <select id="authorSelection" class="selectpicker custom" multiple data-live-search="true">
                         {%for author in authors%}
 
                             <option> {{author}} </option>
@@ -103,7 +104,7 @@
 
             <div class="col-2">
                 <div class="dropdown">
-                    <select class="selectpicker custom" multiple data-live-search="true">
+                    <select id="sourceSelection" class="selectpicker custom" multiple data-live-search="true">
 
                         {%for source in sources%}
 
