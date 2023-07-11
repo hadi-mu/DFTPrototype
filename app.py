@@ -1,10 +1,15 @@
 from flask import Flask,render_template,url_for,request
 
 SOURCES=['gov.uk','BBC','SkyNews'] #possible sources, authors, types etc...
-AUTHORS=['Reportes','Government']
+AUTHORS=['Reporters','Government']
 TYPES=['Reports','Articles','Audits']
+dateRange=""
+sourcesToUse=[]
+authorsToUse=[]
+typesToUse=[]
 app=Flask(__name__)
 app.static_folder='./static'
+
 
 @app.route('/',methods=['POST','GET'])
 def index():
@@ -13,6 +18,15 @@ def index():
           return render_template('main.html', sources=SOURCES, authors=AUTHORS,types=TYPES
           )
 
+@app.route('/date',methods=['POST','GET'])
+
+def changeDate():
+         if request.method == 'POST': #query posted to this method
+                  dateRange=request.form['start']+':'+request.form['end']
+                  print("Dates selected are " + dateRange)
+         return render_template('main.html', sources=SOURCES, authors=AUTHORS,types=TYPES
+          )
+        
 
 
 '''''''''
