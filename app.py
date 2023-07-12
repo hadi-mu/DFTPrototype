@@ -8,8 +8,8 @@ sourcesToUse=[]
 authorsToUse=[]
 typesToUse=[]
 sumText="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-prevHeadings=["Another","Provisional Report 2022","Car Accidents 2019","Fishing Accidents 2021"]
-prevText=["Test text ignore me"]*4
+prevHeadings=["Provisional Report 2022","Car Accidents 2019","Fishing Accidents 2021"]
+prevText=["Test text ignore me"]*3
 app=Flask(__name__)
 app.static_folder='./static'
 
@@ -31,9 +31,14 @@ def changeDate():
 
 @app.route('/filter',methods=['POST','GET'])
 def changeFilters():
-        print("Filtering")
         if request.method == 'POST':
-                print("Types: " + request.form['types'])
+                req=request.form
+                typesToUse=req.getlist('types[]')
+                authorsToUse=req.getlist('authors[]')
+                sourcesToUse=req.getlist('sources[]')
+                print("Types" + str(typesToUse))
+        return render_template('main.html', sources=SOURCES, authors=AUTHORS,types=TYPES,summary=sumText,headings=prevHeadings,previewText=prevText
+          )
         
 
         

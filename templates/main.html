@@ -12,7 +12,6 @@
     <script src ="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>  
     <link rel ="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
     <script src="{{url_for('static',filename='js/searchFunc.js')}}"></script>
-    <script src="{{url_for('static',filename='js/submission.js')}}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='styling.css') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 
@@ -56,8 +55,15 @@
         </div><!-- /.container -->
     </div>
 
+    <div class="row " style="margin-left:10px;"> 
+    <div class="col-2"> </div>
+    <div class="col-2">    <h6 class="display-6" style="margin-top: 20px;">Date:</h6>
+    </div>
 
-    <div class="row " style="margin-top:20px; margin-left:10px;"> 
+
+    <div class="row " style="margin-top:0px; margin-left:10px;"> 
+    
+            <div class="col-2"> </div>
 
             <div class="col-2">
                 <input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
@@ -102,9 +108,8 @@
                 
             </div>
 
-            <div class="col-2">
-                <div class="dropdown">
-                    <select id="sourceSelection" class="selectpicker custom" multiple data-live-search="true">
+            <div class="col-2" >
+                    <select id="sourceSelection"  class="selectpicker custom" multiple data-live-search="true">
 
                         {%for source in sources%}
 
@@ -112,8 +117,11 @@
 
                         {% endfor %}
                       </select>
-                </div>
             </div>
+            
+
+            <div class="col-2"> </div>
+
 
     </div>
 
